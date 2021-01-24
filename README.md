@@ -2,19 +2,13 @@
 
 To view the deployed app visit [Books Table APP](https://books-app2.vercel.app/)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Steps to View This Project in Your Local Environment:
 
-## Available Scripts
+1. Clone this Repo.
+2. Run `npm install` to install all dependencies.
+3. Run `npm start` to start the React app.
 
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
 ### `npm run build`
 
