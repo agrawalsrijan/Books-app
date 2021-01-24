@@ -9,7 +9,7 @@ import {
 import "./checkout-item.styles.css";
 
 const CheckoutItem = ({ cartItem, clearItem, addItem, removeItem }) => {
-  const { title, price, authors, quantity } = cartItem;
+  const { title, price, quantity } = cartItem;
   return (
     <div className="checkout-item">
       <span className="title">{title}</span>

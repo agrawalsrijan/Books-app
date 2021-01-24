@@ -22,7 +22,7 @@ import Input from "@material-ui/core/Input";
 import InputLabel from "@material-ui/core/InputLabel";
 import MenuItem from "@material-ui/core/MenuItem";
 import FormControl from "@material-ui/core/FormControl";
-import ListItemText from "@material-ui/core/ListItemText";
+
 import Select from "@material-ui/core/Select";
 
 import InputAdornment from "@material-ui/core/InputAdornment";
@@ -108,7 +108,7 @@ function EnhancedTableHead(props) {
       <TableRow>
         <TableCell padding="checkbox"></TableCell>
         {columnsToShow.map((column) => {
-          return headCells.map((headCell, i) => {
+          return headCells.map((headCell) => {
             if (column === headCell.id) {
               return (
                 <TableCell
@@ -320,7 +320,7 @@ function BooksTable({ booksData, addItem }) {
   const [orderBy, setOrderBy] = React.useState("calories");
   const [selected, setSelected] = React.useState([]);
   const [page, setPage] = React.useState(0);
-  const [dense, setDense] = React.useState(true);
+  // const [dense, setDense] = React.useState(true);
   const [searchTerm, setSearchTerm] = React.useState("");
   const [rowsPerPage, setRowsPerPage] = React.useState(5);
   const [columnsToShow, setColumnsToShow] = React.useState([
@@ -331,16 +331,19 @@ function BooksTable({ booksData, addItem }) {
     "language_code",
   ]);
 
-  useEffect(async () => {
-    if (booksData?.length == 0) {
-      let offlineData = await get("allBooks");
-      console.log("offline", offlineData);
-      setDataToShow(offlineData);
+  useEffect(() => {
+    if (booksData?.length === 0) {
+      let offlineData;
+      get("allBooks").then((data) => {
+        offlineData = data;
+        console.log("offline", offlineData);
+        setDataToShow(offlineData);
+      });
     } else {
       console.log("inside wrong");
       setDataToShow(booksData);
     }
-  }, []);
+  }, [booksData]);
 
   useEffect(() => {
     if (!searchTerm) {
@@ -356,7 +359,7 @@ function BooksTable({ booksData, addItem }) {
         setDataToShow(booksData);
       }
     }
-  }, [searchTerm]);
+  }, [searchTerm, booksData]);
   const handleRequestSort = (event, property) => {
     const isAsc = orderBy === property && order === "asc";
     setOrder(isAsc ? "desc" : "asc");
@@ -401,7 +404,7 @@ function BooksTable({ booksData, addItem }) {
             <Table
               className={classes.table}
               aria-labelledby="tableTitle"
-              size={dense ? "small" : "medium"}
+              size={"small"}
               aria-label="enhanced table"
             >
               <EnhancedTableHead
@@ -419,7 +422,6 @@ function BooksTable({ booksData, addItem }) {
                   .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
                   .map((row, index) => {
                     // const isItemSelected = isSelected(row.bookID);
-                    const labelId = `enhanced-table-checkbox-${index}`;
 
                     return (
                       <TableRow hover tabIndex={-1} key={row.bookID}>
@@ -455,7 +457,7 @@ function BooksTable({ booksData, addItem }) {
                     );
                   })}
                 {emptyRows > 0 && (
-                  <TableRow style={{ height: (dense ? 33 : 53) * emptyRows }}>
+                  <TableRow style={{ height: 33 * emptyRows }}>
                     <TableCell colSpan={6} />
                   </TableRow>
                 )}

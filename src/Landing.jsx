@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { set, get } from "idb-keyval";
+import { set } from "idb-keyval";
 
 import BooksTable from "./components/bookstable/BooksTable";
 
