@@ -133,6 +133,8 @@ function EnhancedTableHead(props) {
                   </TableSortLabel>
                 </TableCell>
               );
+            } else {
+              return null;
             }
           });
         })}
