@@ -230,14 +230,14 @@ const EnhancedTableToolbar = (props) => {
         [classes.highlight]: numSelected > 0,
       })}
     >
-      <Typography
+      {/* <Typography
         className={classes.title}
         variant="h5"
         id="tableTitle"
         component="div"
       >
         Books
-      </Typography>
+      </Typography> */}
 
       <FormControl className={classes.formControl}>
         <InputLabel id="demo-mutiple-name-label">Columns To Display</InputLabel>
