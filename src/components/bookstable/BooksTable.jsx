@@ -324,7 +324,7 @@ function BooksTable({ booksData, addItem }) {
   const [page, setPage] = React.useState(0);
   // const [dense, setDense] = React.useState(true);
   const [searchTerm, setSearchTerm] = React.useState("");
-  const [rowsPerPage, setRowsPerPage] = React.useState(10);
+  const [rowsPerPage, setRowsPerPage] = React.useState(5);
   const [columnsToShow, setColumnsToShow] = React.useState([
     "title",
     "authors",
