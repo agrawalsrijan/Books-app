@@ -481,7 +481,7 @@ function BooksTable({ booksData, addItem }) {
   } else {
     return (
       <React.Fragment>
-        <h2>No data to show</h2>
+        <h2>Loading....</h2>
       </React.Fragment>
     );
   }
