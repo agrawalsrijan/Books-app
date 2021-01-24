@@ -10,6 +10,14 @@ To view the deployed app visit [Books Table APP](https://books-app2.vercel.app/)
 
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
+## Screenshots of different Screens/Features
+
+![Landing Page](https://github.com/agrawalsrijan/Books-app/blob/master/screenshots/Pic1.PNG)
+![Cart Dropdown/Cart](https://github.com/agrawalsrijan/Books-app/blob/master/screenshots/Cart.PNG)
+![Checkout Page](https://github.com/agrawalsrijan/Books-app/blob/master/screenshots/Checkout.PNG)
+![Search Books By "Book Title" and "Book Author"](https://github.com/agrawalsrijan/Books-app/blob/master/screenshots/Search.PNG)
+![Selectable Columns](https://github.com/agrawalsrijan/Books-app/blob/master/screenshots/Column%20Selector.PNG)
+
 ### `npm run build`
 
 Builds the app for production to the `build` folder.\
