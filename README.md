@@ -12,10 +12,24 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 ## Screenshots of different Screens/Features
 
+### Landing Page
+
 ![Landing Page](https://github.com/agrawalsrijan/Books-app/blob/master/screenshots/Pic1.PNG)
+
+### Cart Dropdown/Cart
+
 ![Cart Dropdown/Cart](https://github.com/agrawalsrijan/Books-app/blob/master/screenshots/Cart.PNG)
+
+### Checkout Page
+
 ![Checkout Page](https://github.com/agrawalsrijan/Books-app/blob/master/screenshots/Checkout.PNG)
+
+### Search Books By "Book Title" and "Book Author"
+
 ![Search Books By "Book Title" and "Book Author"](https://github.com/agrawalsrijan/Books-app/blob/master/screenshots/Search.PNG)
+
+### Selectable Columns To Display in Table
+
 ![Selectable Columns](https://github.com/agrawalsrijan/Books-app/blob/master/screenshots/Column%20Selector.PNG)
 
 ### `npm run build`
